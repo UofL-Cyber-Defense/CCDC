@@ -44,13 +44,13 @@ Legend:
 - `[O]` `[B]` Set up Splunk connector
 - Check:
   - ~/.bashrc,
-	- ~/.bash_aliases
-	- ~/.ssh/authorized_keys
-	- /etc/profile
-	- /etc/sudoers
-	- crontab -e
-	- /var/backups
-	- /etc/apt/sources.list
+  - ~/.bash_aliases
+  - ~/.ssh/authorized_keys
+  - /etc/profile
+  - /etc/sudoers
+  - crontab -e
+  - /var/backups
+  - /etc/apt/sources.list
 - Make static systems immutable
 
 #### Inject Automation
