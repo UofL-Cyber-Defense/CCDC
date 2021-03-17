@@ -1,0 +1,2 @@
+CLAMAV - https://www.clamav.net/downloads
+MAILCOW - https://mailcow.email/ - https://github.com/mailcow/mailcow-dockerized
