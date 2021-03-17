@@ -1,5 +1,9 @@
 #!/bin/bash
 # Author: Noah Tongate @Ap3x
+# Description:
+#  Audit the linux system and common checks for linux
+# Usage:
+# ./<SCRIPT NAME>
 
 # Colors
 RED='\033[0;31m'

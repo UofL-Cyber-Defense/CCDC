@@ -1,4 +1,8 @@
 #!/bin/bash
+# Description:
+# This script configures the iptables then saves the iptables. Then it installs fail2ban and a splunk forwarder. Finally it modifys the php settings and stops list of services then checks the config.
+# Usage:
+# ./<SCRIPT NAME> 
 
 iptables -X
 iptables -F

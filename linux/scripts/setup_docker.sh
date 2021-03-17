@@ -1,4 +1,8 @@
 #!/bin/bash
+# Description:
+# Setup Docker
+# Usage:
+# ./<SCRIPT NAME> 
 
 echo "Setup APT Repositories"
 apt update && apt upgrade -y

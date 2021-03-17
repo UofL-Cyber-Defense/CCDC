@@ -1,3 +1,8 @@
+Rem Description
+Rem 
+Rem Usage
+Rem 
+
 @Echo On
 :: ########## Options ##########
 set ccdcpath="c:\ccdc"

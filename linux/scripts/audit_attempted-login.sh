@@ -1,5 +1,9 @@
 #!/bin/bash
 # Author: Noah Tongate @Ap3x
+# Description:
+# WIP
+# Usage:
+# ./<SCRIPT NAME>
 
 # Colors
 RED='\033[0;31m'

@@ -1,5 +1,9 @@
 #!/bin/bash
 # Author: Noah Tongate @Ap3x
+# Description:
+#  Watchs for any Red Team connections and logs it
+# Usage:
+# ./<SCRIPT NAME>
 
 ss -tupn | grep -v -i "^Netid" > logconnect.log
 while true; do

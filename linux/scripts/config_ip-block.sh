@@ -1,4 +1,7 @@
-#Use this script to quickly block an IP address via iptables
+# Description:
+# Use this script to quickly block an IP address via iptables
+# Usage:
+# ./<SCRIPT NAME> 
 
 #Check that user is root
 if [ "$EUID" -ne 0 ]

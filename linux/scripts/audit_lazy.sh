@@ -1,4 +1,9 @@
 #!/bin/bash
+# Description:
+#  Audit the system and common checks for linux
+# Usage:
+# ./<SCRIPT NAME>
+
 #audit users
 cat /etc/passwd | awk –F: ‘($4 == 0) { print $1 }’
 

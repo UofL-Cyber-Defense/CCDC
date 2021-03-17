@@ -1,4 +1,8 @@
 #!/bin/bash
+# Description:
+# 
+# Usage:
+#
 connectionId="$((RANDOM%90+10)) $((RANDOM%90+10)) $((RANDOM%90+10))"
 sshAuthUser="root"
 USER=$(whoami)

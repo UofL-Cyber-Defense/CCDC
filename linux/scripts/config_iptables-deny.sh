@@ -1,4 +1,8 @@
-#This script is used to quickly deny all inbound and outbound traffic through your iptable to cut off any persitence
+# Description:
+# This script is used to quickly deny all inbound and outbound traffic through your iptable to cut off any persitence
+# Usage:
+# ./<SCRIPT NAME> 
+
 
 #Check that user is root
 if [ "$EUID" -ne 0 ]

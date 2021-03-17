@@ -1,4 +1,9 @@
 #!/bin/bash
+# Description:
+# Install Splunk Forwarder
+# Usage:
+# ./<SCRIPT NAME> 
+
 printf "you need to run this script twice to get splunk setup.\nThere are also no firewall rules included, so you will have to make those\n"
 
 if [[ "$(whoami)" != root ]]; then

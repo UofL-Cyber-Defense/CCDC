@@ -1,4 +1,8 @@
 #!/bin/bash
+# Description:
+# Setup MySQL
+# Usage:
+# ./<SCRIPT NAME> 
 
 apt install mysql-client -y
 

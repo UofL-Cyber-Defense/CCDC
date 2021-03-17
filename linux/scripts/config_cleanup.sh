@@ -1,4 +1,8 @@
 #! /bin/bash
+# Description:
+#  Cleans up Authorized SSH Keys and remove access to crons from every user except root
+# Usage:
+# ./<SCRIPT NAME>
 
 ## General housekeeping shanagans
 

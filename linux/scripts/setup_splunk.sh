@@ -1,4 +1,8 @@
 #!/bin/bash
+# Description:
+# Setup Splunk
+# Usage:
+# ./<SCRIPT NAME> 
 
 docker pull splunk/splunk:latest
 
