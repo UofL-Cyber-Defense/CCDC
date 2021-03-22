@@ -1,3 +1,4 @@
+#!/bin/bash
 # Description:
 # This script is used to quickly deny all inbound and outbound traffic through your iptable to cut off any persitence
 # Usage:

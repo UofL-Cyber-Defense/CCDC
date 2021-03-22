@@ -1,6 +1,6 @@
 #!/bin/bash
 # Description:
-# Install Splunk Forwarder
+# Setups the Splunk Forwarder. Please see https://docs.splunk.com/Documentation/Forwarder/8.1.3/Forwarder/Installanixuniversalforwarder
 # Usage:
 # ./<SCRIPT NAME> 
 
@@ -41,13 +41,13 @@ fi
 
 if [[ $box == "6" ]]
 then
-read -p "Add new forwad server? y or n: " monitormode
-if [[ $monitormode == "y" ]]
-then
-read -p "Enter ip address of the splunk server: " splunkip
-read -p "Enter port: " splunkport
-/opt/splunkforwader/bin/splunk add forwad-server $splunkip:$splunkport
-fi
+	read -p "Add new forward server? y or n: " monitormode
+	if [[ $monitormode == "y" ]]
+	then
+		read -p "Enter ip address of the splunk server: " splunkip
+		read -p "Enter port: " splunkport
+		/opt/splunkforwader/bin/splunk add forwad-server $splunkip:$splunkport
+	fi
 fi
 
 read -p "Use pre-setup monitoring(do yes, unless I say otherwise) y or n: " setupmonitoring
@@ -93,38 +93,36 @@ then
 #fedora webmail, done
 index="public"
 if [[ $setupmode != "n" ]]; then
-/opt/splunkforwader/bin/splunk add monitor /var/log/anaconda -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/cron -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/apache2 -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/maillog -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/secure -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/yum.log -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/httpd -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/audit -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/messages -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/roundcubemail -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/iptables.log -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/fail2ban.log -index $index
-
+	/opt/splunkforwader/bin/splunk add monitor /var/log/anaconda -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/cron -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/apache2 -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/maillog -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/secure -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/yum.log -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/httpd -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/audit -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/messages -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/roundcubemail -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/iptables.log -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/fail2ban.log -index $index
 fi
-
 
 elif [[ $box == "4" ]]
 then
 #Centos Ecomm
 index="public"
 if [[ $setupmode != "n" ]]; then
-/opt/splunkforwader/bin/splunk add monitor /var/log/yum.log -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/httpd -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/cron -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/dmesg -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/maillog -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/messages -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/www/html/prestashop/log -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/iptables.log -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/fail2ban.log -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/inotify.txt -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/mariadb -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/yum.log -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/httpd -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/cron -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/dmesg -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/maillog -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/messages -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/www/html/prestashop/log -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/iptables.log -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/fail2ban.log -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/inotify.txt -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/mariadb -index $index
 
 fi
 
@@ -133,32 +131,33 @@ then
 #Ubtuntu Wkst, proably done
 index="user"
 if [[ $setupmode != "n" ]]; then
-/opt/splunkforwader/bin/splunk add monitor /var/log/auth.log -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/fail2ban.log -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/dpkg.log  -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/cron.log  -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/installer -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/syslog -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/messages -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/faillog -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/dmesg.log  -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/daemon.log  -index $index
-/opt/splunkforwader/bin/splunk add monitor /var/log/iptables.log -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/auth.log -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/fail2ban.log -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/dpkg.log  -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/cron.log  -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/installer -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/syslog -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/messages -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/faillog -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/dmesg.log  -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/daemon.log  -index $index
+	/opt/splunkforwader/bin/splunk add monitor /var/log/iptables.log -index $index
 fi
 
 elif [[ $box == "6" ]]
 then
-echo "You are in manual setup mode"
-read -p "please enter the index name: " index
+	echo "You are in manual setup mode"
+	read -p "please enter the index name: " index
 
 
 else
-echo "please restart the script and chose a valid option"
-exit 1
+	echo "please restart the script and chose a valid option"
+	exit 1
 
 fi
 fi
-#needs to be run on all boxes
+
+# Needs to be run on all boxes
 
 extralog=""
 while [[ $extralog != "no" ]]
@@ -172,8 +171,8 @@ type 'no' to exit : " extralog
 	fi
 	done
 
-/opt/splunkforwader/bin/splunk restart
-/opt/splunkforwader/bin/splunk list forwad-server	
+	/opt/splunkforwader/bin/splunk restart
+	/opt/splunkforwader/bin/splunk list forwad-server	
 
 
 else

@@ -1,3 +1,4 @@
+#!/bin/bash
 # Description:
 # Use this script to quickly block an IP address via iptables
 # Usage:

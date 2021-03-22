@@ -4,10 +4,6 @@ ipconfig /flushdns
 #flusg Netbois cache of host IP
 nbtstat -R 
   
-
-
-
-
 #Rules for IPSec over port 80 and 447
 netsh ipsec static add filteraction name=Allow action=permit 
 netsh ipsec static add filter filterlist=WebFilter srcaddr=Any dstaddr=Any protocol=TCP dstport=80 

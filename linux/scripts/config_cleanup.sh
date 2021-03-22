@@ -1,6 +1,6 @@
 #! /bin/bash
 # Description:
-#  Cleans up Authorized SSH Keys and remove access to crons from every user except root
+# Cleans up Authorized SSH Keys and remove access to crons from every user except root
 # Usage:
 # ./<SCRIPT NAME>
 
@@ -27,6 +27,8 @@ for user_d in /home/* ; do
 done
 
 # Check /etc/ssh/sshd_config
+cat /etc/ssh/sshd_config  | grep -v '^#\|^$|^;'
+
 
 # Restart ssh
 /etc/init.d/sshd restart
